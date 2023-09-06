@@ -16,3 +16,4 @@ if valg == "B":
 
     if valg == "B":
         print("incorrect")
+        print()
