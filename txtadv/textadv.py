@@ -1,53 +1,39 @@
-hp = 100
+lukehp = 3
 
-def rom_1():
-    global hp
+def van():
 
-    print("HP:", hp )
+    print("Du har blitt kidnappet av Kanye West, og du blir forlatt i en van")
+    print("Der finner du et brekkhjern og et appelsinskall, Hva skal du gjøre?")
+    van2()
 
-    print("Du står nå i rom 1")
+def van2():
+    global lukehp
+    lukehp -= 1
     asking = True
     while asking == True:
-        valg = input("A: ___ B: ___ -> ")
+        valg = input("A: slå bakluka med brekkhjernet B: kast appelsinskallet ut vinduet -> ")
         if valg == "A" or valg == "B":
             asking = False
         else:
             print("Du skrev feil i input, velg et av alternativene")
  
     if valg == "A":
-        rom_2()  
+        brekk()  
     elif valg == "B":
-        rom_3()
+        skall()
 
-def rom_2():
-    global hp
+def brekk():
+    if lukehp <= 1:
+        print("du ødela luka! du er nå fri!")
 
-    print("Du står nå i rom 2")
-    hp -= 30
-    print("HP: ", hp )
+    else:    
+        print("luka er bra sterk.. du sitter enda låst inne i vanen, prøv igjen")
+        van2()
+    
 
-    asking = True
-    while asking == True:
-        valg = input("A: ___ B: ___ -> ")
-        if valg == "A" or valg == "B":
-            asking = False
-        else:
-            print("Du skrev feil i input, velg et av alternativene")
- 
-    if valg == "A":
-        rom_1()  
-    elif valg == "B":
-        rom_3()
+def skall():
 
-def rom_3():
-    global hp
-
-    print("Du står nå i rom 3")
-    hp += 15
-    print("HP:", hp )
-    if hp <= 0:
-        print("god natt")
-        exit()
+    print("du kastet skallet ut av vinduet, en mann går forbi, ser skallet, men ser også en nøkkel! du spør han om å låse opp vanen.")
 
     asking = True
     while asking == True:
@@ -61,6 +47,27 @@ def rom_3():
         rom_1()  
     elif valg == "B":
         rom_2()
+
+    print("HP: ", hp )
+    if hp <= 0:
+        print("god natt")
+        exit()
+
+def noe():
+    asking = True
+    while asking == True:
+        valg = input("A: ___ B: ___ -> ")
+        if valg == "A" or valg == "B":
+            asking = False
+        else:
+            print("Du skrev feil i input, velg et av alternativene")
+ 
+    if valg == "A":
+        rom_1()  
+    elif valg == "B":
+        rom_3()
+
+van()
 
   
 
