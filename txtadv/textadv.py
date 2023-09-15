@@ -1,5 +1,6 @@
 lukehp = 3
-
+proteinbar = 0
+hp = 100
 def van():
 
     print("")
@@ -29,9 +30,27 @@ def van2():
         skall()
 
 def brekk():
+    global proteinbar
     if lukehp <= 1:
         print("du ødela luka! du er nå fri!")
-        print("")
+        print("")    
+        print("vil du ha en proteinbar?")
+        asking = True
+        while asking == True:
+            valg = input("A: jaa B: nuh uh -> ")
+            if valg == "A" or valg == "B":
+                asking = False
+            else:
+                print("Du skrev feil i input, velg et av alternativene")
+                print("")
+    
+        if valg == "A":
+            print("nice")
+            proteinbar += 1
+            print("")
+            print(f"du har nå {proteinbar} proteinbar(er)")
+        elif valg == "B":
+            pass
 
     else:    
         print("luka er bra sterk.. du sitter enda låst inne i vanen, prøv igjen")
@@ -40,25 +59,14 @@ def brekk():
     
 
 def skall():
-
+    global hp
     print("du kastet skallet ut av vinduet, en mann går forbi, ser skallet, men ser også en nøkkel! han låser opp vanen.")
     print("")
     print("du går ut av den, og innser at du er i The Backrooms..")
-    print("")
 
-    asking = True
-    while asking == True:
-        valg = input("A: ___ B: ___ -> ")
-        if valg == "A" or valg == "B":
-            asking = False
-        else:
-            print("Du skrev feil i input, velg et av alternativene")
-            print("")
- 
-    if valg == "A":
-        rom_1()  
-    elif valg == "B":
-        rom_2()
+
+
+        
 
     print("HP: ", hp )
     if hp <= 0:
