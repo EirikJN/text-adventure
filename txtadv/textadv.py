@@ -50,7 +50,7 @@ def brekk():
             proteinbar += 1
             print("")
             if proteinbar == 1:
-                print(f"du har nå {proteinbar} proteinbar")
+                print(f"du har {proteinbar} proteinbar")
             
             else:
                 print(f"du har {proteinbar} proteinbarer")
@@ -64,35 +64,40 @@ def brekk():
     
 
 def skall():
-    global hp
+    global proteinbar
     print("du kastet skallet ut av vinduet, en mann går forbi, ser skallet, men ser også en nøkkel! han låser opp vanen.")
     print("du går ut av den, og innser at du er i The Backrooms..")
 
-
-
-        
-
-    print("HP: ", hp )
-    if hp <= 0:
-        print("god natt")
-        exit()
-
-def noe():
     asking = True
     while asking == True:
-        valg = input("A: ___ B: ___ -> ")
-        if valg == "A" or valg == "B":
+        valg = input("A: jaa B: nuh uh -> ")
+        if valg == "F":
             asking = False
         else:
             print("Du skrev feil i input, velg et av alternativene")
- 
-    if valg == "A":
-        rom_1()  
-    elif valg == "B":
-        rom_3()
+            print("")
+
+    if valg == "F":
+
+        if proteinbar == 1:
+            print(f"du har {proteinbar} proteinbar")
+        
+        else:
+            print(f"du har {proteinbar} proteinbarer")
+
+    else:
+        backrooms() 
+        
+        
+def backrooms():
+     global proteinbar
+
+
+
+
+
+
+
+
 
 van()
-
-  
-
-    
