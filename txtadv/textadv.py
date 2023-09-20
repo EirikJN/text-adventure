@@ -41,7 +41,7 @@ def brekk():
             valg = input("A: jaa B: nuh uh -> ")
             if valg == "A" or valg == "B":
                 asking = False
-            else:
+            else: 
                 print("Du skrev feil i input, velg et av alternativene")
                 print("")
     
@@ -86,7 +86,7 @@ def skall():
             print(f"du har {proteinbar} proteinbarer")
 
     else:
-        backrooms() 
+        backrooms()
         
         
 def backrooms():
