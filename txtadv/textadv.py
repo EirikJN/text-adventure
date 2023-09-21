@@ -35,28 +35,10 @@ def brekk():
         print("du ødela luka! du er nå fri!")
         print("du går ut av den, og innser at du er i The Backrooms..")
         print("")    
-        print("vil du ha en proteinbar?")
-        asking = True
-        while asking == True:
-            valg = input("A: jaa B: nuh uh -> ")
-            if valg == "A" or valg == "B":
-                asking = False
-            else: 
-                print("Du skrev feil i input, velg et av alternativene")
-                print("")
-    
-        if valg == "A":
-            print("nice")
-            proteinbar += 1
-            print("")
-            if proteinbar == 1:
-                print(f"du har {proteinbar} proteinbar")
-            
-            else:
-                print(f"du har {proteinbar} proteinbarer")
 
-        elif valg == "B":
-            pass
+        pr0teinbar()
+
+        backrooms()
 
     else:    
         print("luka er bra sterk.. du sitter enda låst inne i vanen, prøv igjen")
@@ -68,33 +50,39 @@ def skall():
     print("du kastet skallet ut av vinduet, en mann går forbi, ser skallet, men ser også en nøkkel! han låser opp vanen.")
     print("du går ut av den, og innser at du er i The Backrooms..")
 
+    backrooms()
+
+
+def pr0teinbar():
+    global proteinbar
+    print("vil du ha en proteinbar?")
     asking = True
     while asking == True:
         valg = input("A: jaa B: nuh uh -> ")
-        if valg == "F":
+        if valg == "A" or valg == "B":
             asking = False
-        else:
+        else: 
             print("Du skrev feil i input, velg et av alternativene")
             print("")
+    
+        if valg == "A":
+            print("")
+            print("nice")
+            proteinbar += 1
+            
+            if proteinbar == 1:
+                print(f"du har {proteinbar} proteinbar")
+                print("")
+            
+            else:
+                print(f"du har {proteinbar} proteinbarer")
+                print("")
 
-    if valg == "F":
-
-        if proteinbar == 1:
-            print(f"du har {proteinbar} proteinbar")
-        
-        else:
-            print(f"du har {proteinbar} proteinbarer")
-
-    else:
-        backrooms()
-        
+        elif valg == "B":
+            pass
         
 def backrooms():
-     global proteinbar
-
-
-
-
+    
 
 
 
