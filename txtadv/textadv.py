@@ -74,11 +74,11 @@ def pr0teinbar():
             
             if proteinbar == 1:
                 print(f"du har {proteinbar} proteinbar")
-                print("")
+                print("trykk F når som helst for å sjekke hvor mange proteinbarer du har")
             
             else:
                 print(f"du har {proteinbar} proteinbarer")
-                print("")
+                print("trykk F når som helst for å sjekke hvor mange proteinbarer du har")
 
         elif valg == "B":
             pass
@@ -125,6 +125,7 @@ def gang_2():
 def gang_3():
     print("gang3")
 
+    
 
 
 van()
