@@ -38,7 +38,7 @@ def brekk():
 
         pr0teinbar()
 
-        backrooms()
+        backrooms_intro()
 
     else:    
         print("luka er bra sterk.. du sitter enda låst inne i vanen, prøv igjen")
@@ -47,10 +47,12 @@ def brekk():
 
 def skall():
     global proteinbar
-    print("du kastet skallet ut av vinduet, en mann går forbi, ser skallet, men ser også en nøkkel! han låser opp vanen.")
+    print("du kastet skallet ut av vinduet, en mann går forbi, ser ned på skallet som ligger på bakken")
+    print("men ser også en nøkkel som ligger rett ved siden av den! han låser opp vanen.")
     print("du går ut av den, og innser at du er i The Backrooms..")
+    print("")
 
-    backrooms()
+    backrooms_intro()
 
 
 def pr0teinbar():
@@ -81,10 +83,47 @@ def pr0teinbar():
         elif valg == "B":
             pass
         
+def backrooms_intro():
+    print("du ser tre ganger, du må velge en av de")
+    print("den første er veldig mørk, ser ikke ut til å ha en ende..")
+    print("den andre er lyst opp av røde lyspaneler i taket")
+    print("den tredje er lyst opp av grønn-gule lyspaneler i taket, ser ut til å være et skap lengre inn i gangen")
+    print("")
+    print("hvilken velger du?")
+    backrooms()
+
 def backrooms():
-    
+    asking = True
+    while asking == True:
+        valg = input("A: gang 1 B: gang 2 C: gang 3 -> ")
+        print("")
+        if valg == "A" or valg == "B":
+            asking = False
+        else:
+            print("Du skrev feil i input, velg et av alternativene")
+            print("")
+ 
+    if valg == "A":
+        gang_1()  
+    if valg == "B":
+        gang_2()
+    elif valg == "C":
+        gang_3()
+
+def gang_1():
+    print("du går inn i gangen, tilslutt blir det så mørkt at du ikke ser noe, men du følger veggen videre")
+    print("så ser du en slutt på gangen")
+    print("når du kommer frem, så innser du at du har gått i en sirkel.. du er tilbake til der du startet")
+    print("")
+    backrooms()
 
 
+def gang_2():
+    print("gang2")
+
+
+def gang_3():
+    print("gang3")
 
 
 
