@@ -74,20 +74,20 @@ def pr0teinbar():
             
             if proteinbar == 1:
                 print(f"du har {proteinbar} proteinbar")
-                print("trykk F når som helst for å sjekke hvor mange proteinbarer du har")
+                print("")
             
             else:
                 print(f"du har {proteinbar} proteinbarer")
-                print("trykk F når som helst for å sjekke hvor mange proteinbarer du har")
+                print("")
 
         elif valg == "B":
             pass
         
 def backrooms_intro():
     print("du ser tre ganger, du må velge en av de")
-    print("den første er veldig mørk, ser ikke ut til å ha en ende..")
-    print("den andre er lyst opp av røde lyspaneler i taket")
-    print("den tredje er lyst opp av grønn-gule lyspaneler i taket, ser ut til å være et skap lengre inn i gangen")
+    print("gang 1 er veldig mørk, ser ikke ut til å ha en ende..")
+    print("gang 2 er lyst opp av røde lyspaneler i taket")
+    print("gang 3 er lyst opp av grønn-gule lyspaneler i taket, ser ut til å være et skap lengre inn i gangen")
     print("")
     print("hvilken velger du?")
     backrooms()
