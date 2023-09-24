@@ -123,7 +123,8 @@ def gang_2():
 
 
 def gang_3():
-    print("gang3")
+    print("du går lengre inn i gangen, plutselig blir alle lysene rød")
+    print("du nærmer deg skapet, vil du gjemme deg i det?")
 
     
 
