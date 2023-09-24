@@ -50,11 +50,11 @@
    'C:\\Users\\Bruker\\OneDrive - Nordland '
    'fylkeskommune\\Dokumenter\\GitHub\\text-adventure\\txtadv\\textadv.py',
    'PYSOURCE'),
-  ('python311.dll',
-   'C:\\Users\\Bruker\\AppData\\Local\\Programs\\Python\\Python311\\python311.dll',
-   'BINARY'),
   ('VCRUNTIME140.dll',
    'C:\\Users\\Bruker\\AppData\\Local\\Programs\\Python\\Python311\\VCRUNTIME140.dll',
+   'BINARY'),
+  ('python311.dll',
+   'C:\\Users\\Bruker\\AppData\\Local\\Programs\\Python\\Python311\\python311.dll',
    'BINARY'),
   ('_decimal.pyd',
    'C:\\Users\\Bruker\\AppData\\Local\\Programs\\Python\\Python311\\DLLs\\_decimal.pyd',
@@ -93,7 +93,7 @@
  [],
  False,
  False,
- 1695020152,
+ 1695579474,
  [('run.exe',
    'C:\\Users\\Bruker\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\PyInstaller\\bootloader\\Windows-64bit-intel\\run.exe',
    'EXECUTABLE')])

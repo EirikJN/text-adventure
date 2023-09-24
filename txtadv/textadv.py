@@ -1,6 +1,6 @@
 lukehp = 3
 proteinbar = 0
-hp = 100
+van_nøkkel = 0
 def van():
 
     print("")
@@ -77,8 +77,7 @@ def pr0teinbar():
                 print("")
             
             else:
-                print(f"du har {proteinbar} proteinbarer")
-                print("")
+                pass
 
         elif valg == "B":
             pass
@@ -97,7 +96,7 @@ def backrooms():
     while asking == True:
         valg = input("A: gang 1 B: gang 2 C: gang 3 -> ")
         print("")
-        if valg == "A" or valg == "B":
+        if valg == "A" or valg == "B" or valg == "C":
             asking = False
         else:
             print("Du skrev feil i input, velg et av alternativene")
@@ -107,7 +106,7 @@ def backrooms():
         gang_1()  
     if valg == "B":
         gang_2()
-    elif valg == "C":
+    if valg == "C":
         gang_3()
 
 def gang_1():
@@ -119,16 +118,20 @@ def gang_1():
 
 
 def gang_2():
-    print("gang2")
+    global van_nøkkel
+    van_nøkkel += 1
+    print("du går inn i gang 2, her finner du nøkkelen til vanen!")
+    print("men ellers er det en blindvei, du drar tilbake ")
+    backrooms()
 
 
 def gang_3():
     print("du går lengre inn i gangen, plutselig blir alle lysene rød")
-    print("du nærmer deg skapet, vil du gjemme deg i det?")
+    print("du nærmer deg skapet, vil du gå bort til det?")
+    print("")
     asking = True
     while asking == True:
-        valg = input("A: gjemme deg i skapet B: gå videre -> ")
-        print("")
+        valg = input("A: gå til skapet B: gå videre -> ")
         if valg == "A" or valg == "B":
             asking = False
         else:
@@ -142,16 +145,98 @@ def gang_3():
 
 
 def skap():
-    print("det var veldig lurt, for bare sekunder senere gikk det et monster forbi")
+    print("det var veldig lurt, for bare sekunder senere hører du en høy lyd, du gjemmer deg i skapet, like etter går det et monster forbi")
     print("")
+    van_finn()
 
 
 def gå_videre():
+    global proteinbar
     print("du går videre, men bare noen få sekunder senere hører du dunking rett over deg")
-    print("like etter faller det en plate ned fra taket, og samtidig hopper det et monster ned")
+    print("like etter faller det en plate ned fra taket, og samtidig hopper det et monster ned rett forran deg")
+    print("")
+    print("hva vil du gjøre??")
+    asking = True
+    while asking == True:
+        valg = input("A: gi bro en klem B: LØP -> ")
+        if valg == "A" or valg == "B":
+            asking = False
+        else:
+            print("Du skrev feil i input, velg et av alternativene")
+            print("")
+
+    if valg == "A":
+        klem()  
+    elif valg == "B":
+        løp()
 
 
+def løp():
+    print("du løper så fort du bare klarer, men monsteret tar deg snart igjen!")
+    print("vil du spise en proteinbar?")
+    if proteinbar == 1:
+        print(f"du har {proteinbar} proteinbar")
+        print("")
+        asking = True
+        while asking == True:
+            valg = input("A: spis den B: ekke sulten -> ")
+        if valg == "A" or valg == "B":
+            asking = False
 
+        else:
+            print("Du skrev feil i input, velg et av alternativene")
+            print("")
+
+    if valg == "A":
+        spist()  
+    elif valg == "B":
+        ikke_sulten()
+            
+    else:
+        print("du har dessverre ingen proteinbarer..")
+        print("monsteret tok deg igjen, og du ble knaska på")
+        quit
+
+
+def spist():
+    print("smart valg, nå har du energien til å løpe fra den!")
+
+
+def van_finn():
+    print("nå ser du vanen igjen!")
+    print("du går til vanen, og innser at den er låst igjen")
+    if van_nøkkel >= 1:
+        print("du har en nøkkel!")
+        print("")
+        asking = True
+        while asking == True:
+            valg = input("trykk A for å bruk e den -> ")
+        if valg == "A":
+            asking = False
+
+        else:
+            print("Du skrev feil i input, velg et av alternativene")
+            print("")
+
+    if valg == "A":
+            escape()  
+                
+    else:
+        print("du har dessverre ikke en nøkkel..")
+        print("du er låst inne i The Backrooms for alltid...")
+        quit
+
+
+def ikke_sulten():
+    print("oisann, monsteret tok deg igjen, den var ikke interessert i å bli venner! god natt")
+    quit
+
+def klem():
+    print("uffda, det endte ikke bra, du døde")
+    quit
+
+def escape():
+    print("yep")
 
 
 van()
