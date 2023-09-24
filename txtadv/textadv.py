@@ -125,8 +125,33 @@ def gang_2():
 def gang_3():
     print("du går lengre inn i gangen, plutselig blir alle lysene rød")
     print("du nærmer deg skapet, vil du gjemme deg i det?")
+    asking = True
+    while asking == True:
+        valg = input("A: gjemme deg i skapet B: gå videre -> ")
+        print("")
+        if valg == "A" or valg == "B":
+            asking = False
+        else:
+            print("Du skrev feil i input, velg et av alternativene")
+            print("")
 
-    
+    if valg == "A":
+        skap()  
+    elif valg == "B":
+        gå_videre()
+
+
+def skap():
+    print("det var veldig lurt, for bare sekunder senere gikk det et monster forbi")
+    print("")
+
+
+def gå_videre():
+    print("du går videre, men bare noen få sekunder senere hører du dunking rett over deg")
+    print("like etter faller det en plate ned fra taket, og samtidig hopper det et monster ned")
+
+
+
 
 
 van()
